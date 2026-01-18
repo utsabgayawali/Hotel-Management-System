@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Luxury Redefined</h1>
+        <p>Experience unparalleled comfort in the heart of the city.</p>
+        
+        <div class="search-bar">
+            <div class="form-group">
+                <label>Check In</label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Guests</label>
+                <select>
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>Suite Experience</option>
+                </select>
+            </div>
+            <button class="btn-gold">SEARCH ROOMS</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

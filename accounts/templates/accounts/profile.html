@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="auth-card" style="max-width: 900px; margin: 0 auto; display: flex; gap: 40px; align-items: flex-start;">
+        <div style="text-align: center; flex: 1;">
+            <div style="width: 150px; height: 150px; border-radius: 50%; background: #eee; margin: 0 auto 20px;"></div>
+            <h3>John Doe</h3>
+            <p style="color: #888;">Member since 2024</p>
+            <button class="btn-gold" style="margin-top: 20px; padding: 10px 20px;">Edit Profile</button>
+        </div>
+        <div style="flex: 2; border-left: 1px solid #eee; padding-left: 40px;">
+            <h4 style="margin-bottom: 20px;">Active Reservations</h4>
+            <div style="background: #fcfcfc; border: 1.5px solid #f0f0f0; padding: 25px; border-radius: 15px;">
+                <h5 style="color: var(--accent);">Executive Suite #402</h5>
+                <p><strong>Dates:</strong> Jan 20 - Jan 25, 2026</p>
+                <p style="color: green; font-weight: bold; margin-top: 10px;">● Confirmed</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

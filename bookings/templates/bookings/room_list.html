@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--primary);">Discover Our Suites</h2>
+    <div class="room-grid">
+        <div class="room-card">
+            <div class="room-img" style="background-image: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800');"></div>
+            <div class="room-details">
+                <h3>Executive Ocean Suite</h3>
+                <p style="color: #666; margin: 10px 0;">Luxury suite with panoramic city views and premium king bedding.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <span style="font-size: 1.4rem; font-weight: bold; color: var(--accent);">$250<small style="font-size: 0.8rem; color: #999;">/night</small></span>
+                    <a href="#" class="btn-gold">View Details</a>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+{% endblock %}

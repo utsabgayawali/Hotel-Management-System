@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Horizon | Luxury Stay</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo">GRAND<span>HORIZON</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+       
+       {% endblock content %}
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Grand Horizon Hotel. All rights reserved.</p>
+        </footer>
+
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
