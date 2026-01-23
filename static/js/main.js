@@ -1,22 +1,10 @@
-function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    const menuBtn = document.querySelector('.menu-btn');
-    
-    navLinks.classList.toggle('active');
-    // For hamburger animation
-    menuBtn.classList.toggle('change');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 80) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     }
-});
-
-// Auto-fill dates
-document.querySelectorAll('input[type="date"]').forEach(input => {
-    if (!input.value) input.valueAsDate = new Date();
 });

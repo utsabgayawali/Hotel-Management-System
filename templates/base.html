@@ -4,32 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Horizon | Luxury Stay</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    </head>
+    <title>Grand Horizon Hotel</title>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
     <nav class="navbar">
-        <div class="logo">GRAND<span>HORIZON</span></div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Rooms</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span><span></span><span></span>
+        <a href="home.html" class="logo">GRAND HORIZON</a>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="room_list.html">Rooms</a>
+            <a href="about.html">About</a>
+            <a href="profile.html">My Bookings</a>
+            <a href="login.html" class="btn-auth">Login</a>
         </div>
     </nav>
 
     <main>
         {% block content %}
-       
-       {% endblock content %}
+        
+        {% endblock content %}
         </main>
 
-        <footer class="footer">
-            <p>&copy; 2026 Grand Horizon Hotel. All rights reserved.</p>
-        </footer>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Grand Horizon</h3>
+                <p>Experience luxury in the heart of the city.</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>123 Luxury Ave, Ocean City</p>
+                <p>+1 234 567 890</p>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <hr style="opacity: 0.2;">
+        <p style="text-align: center; padding-top: 1rem;">&copy; 2024 Grand Horizon Hotel. All rights reserved.</p>
+    </footer>
 
-        <script src="{% static 'js/main.js' %}"></script>
-    </body>
+    <script src="/static/js/main.js"></script>
+</body>
 </html>

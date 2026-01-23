@@ -1,28 +1,63 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="auth-wrapper">
-    <div class="auth-card">
-        <h2 style="margin-bottom: 30px; color: var(--primary);">Complete Your Booking</h2>
-        <form>
-            <div class="form-group">
-                <label>Check-In Date</label>
-                <input type="date">
+<div class="container" style="max-width: 900px;">
+    <div class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div style="padding: 2.5rem;">
+            <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Reserve Your Room</h2>
+            <form>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+                    <div>
+                        <label>Check-in Date</label>
+                        <input type="date" style="width: 100%; padding: 0.8rem; margin-top: 0.4rem; border: 1px solid #ddd;">
+                    </div>
+                    <div>
+                        <label>Check-out Date</label>
+                        <input type="date" style="width: 100%; padding: 0.8rem; margin-top: 0.4rem; border: 1px solid #ddd;">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.2rem;">
+                    <label>Room Type</label>
+                    <select style="width: 100%; padding: 0.8rem; margin-top: 0.4rem; border: 1px solid #ddd;">
+                        <option>Deluxe Ocean View</option>
+                        <option>Executive Suite</option>
+                        <option>Presidential Suite</option>
+                        <option>Single Standard</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <label>Number of Guests</label>
+                    <input type="number" min="1" max="10" value="1" style="width: 100%; padding: 0.8rem; margin-top: 0.4rem; border: 1px solid #ddd;">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; background: var(--accent);">Confirm Booking</button>
+            </form>
+        </div>
+
+        <div style="background: #f0f2f5; padding: 2.5rem; border-left: 1px solid #eee;">
+            <h3 style="margin-bottom: 1rem;">Booking Summary</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span>Room Rate</span>
+                    <strong>$250.00</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span>Tax (10%)</span>
+                    <strong>$25.00</strong>
+                </div>
+                <hr>
+                <div style="display: flex; justify-content: space-between; font-size: 1.2rem; color: var(--primary);">
+                    <span>Total</span>
+                    <strong>$275.00</strong>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Check-Out Date</label>
-                <input type="date">
-            </div>
-            <div class="form-group">
-                <label>Total Guests</label>
-                <select><option>1 Adult</option><option>2 Adults</option></select>
-            </div>
-            <div class="form-group">
-                <label>Special Requests</label>
-                <textarea rows="4" placeholder="e.g. Airport pickup, Anniversary..."></textarea>
-            </div>
-            <button class="btn-gold" style="width: 100%; margin-top: 10px;">CONFIRM RESERVATION</button>
-        </form>
+            <p style="margin-top: 2rem; font-size: 0.85rem; color: #777;">
+                <i class="fas fa-info-circle"></i> Free cancellation up to 24 hours before check-in.
+            </p>
+        </div>
     </div>
 </div>
+
 {% endblock %}
