@@ -13,11 +13,11 @@
         <a href="home.html" class="logo">GRAND HORIZON</a>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
         <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="room_list.html">Rooms</a>
-            <a href="about.html">About</a>
-            <a href="profile.html">My Bookings</a>
-            <a href="login.html" class="btn-auth">Login</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'room_list' %}">Rooms</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'profile' %}">My Bookings</a>
+            <a href="{% url 'login' %}" class="btn-auth">Login</a>
         </div>
     </nav>
 

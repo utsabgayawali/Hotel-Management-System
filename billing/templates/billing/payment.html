@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container section-padding">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+        
+        <div class="card" style="padding: 2rem;">
+            <h2 style="margin-bottom: 1.5rem;">Payment Information</h2>
+            <form>
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Cardholder Name</label>
+                    <input type="text" class="form-control" placeholder="Johnathan Doe" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Card Number</label>
+                    <input type="text" class="form-control" placeholder="0000 0000 0000 0000" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Expiry Date</label>
+                        <input type="text" placeholder="MM/YY" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">CVV</label>
+                        <input type="password" placeholder="***" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                </div>
+                <a href="invoice.html" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem; background: var(--accent);">Pay $1,250.00 Now</a>
+            </form>
+        </div>
+
+        <div style="padding: 1rem;">
+            <h3 style="margin-bottom: 1.5rem;">Stay Summary</h3>
+            <div class="card" style="padding: 1.5rem; background: #fff;">
+                <p style="display: flex; justify-content: space-between; margin-bottom: 0.8rem;">
+                    <span>Presidential Suite x 3 Nights</span>
+                    <strong>$1,200.00</strong>
+                </p>
+                <p style="display: flex; justify-content: space-between; margin-bottom: 0.8rem;">
+                    <span>Service Fee</span>
+                    <strong>$50.00</strong>
+                </p>
+                <hr style="margin: 1rem 0; opacity: 0.1;">
+                <p style="display: flex; justify-content: space-between; font-size: 1.3rem; color: var(--primary); font-weight: bold;">
+                    <span>Total Amount</span>
+                    <span>$1,250.00</span>
+                </p>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem; color: #666; font-size: 0.9rem;">
+                <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--accent);"></i>
+                <p>Your payment is secure. We use 256-bit SSL encryption to protect your data.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

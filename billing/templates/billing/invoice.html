@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container section-padding">
+    <div style="text-align: right; margin-bottom: 1rem;">
+        <button onclick="window.print()" class="btn btn-outline">
+            <i class="fas fa-print"></i> Print Invoice
+        </button>
+    </div>
+    
+    <div class="card" style="padding: 3rem; max-width: 850px; margin: 0 auto; background: #fff;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 3rem;">
+            <div>
+                <h1 style="color: var(--primary); margin-bottom: 0.5rem;">INVOICE</h1>
+                <p>#INV-2024-8821</p>
+                <p>Date: June 15, 2024</p>
+            </div>
+            <div style="text-align: right;">
+                <h2 style="color: var(--accent);">Grand Horizon Hotel</h2>
+                <p>123 Luxury Avenue, Ocean District</p>
+                <p>contact@grandhorizon.com</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--light); border-radius: 4px;">
+            <h4 style="margin-bottom: 0.5rem;">Billed To:</h4>
+            <p><strong>John Doe</strong></p>
+            <p>john.doe@example.com</p>
+            <p>+1 234 567 890</p>
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+            <thead>
+                <tr style="border-bottom: 2px solid var(--primary); text-align: left;">
+                    <th style="padding: 1rem 0;">Room / Service</th>
+                    <th style="padding: 1rem 0;">Dates</th>
+                    <th style="padding: 1rem 0; text-align: right;">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 1rem 0;">Presidential Suite</td>
+                    <td style="padding: 1rem 0;">June 20 - June 23</td>
+                    <td style="padding: 1rem 0; text-align: right;">$1,200.00</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 1rem 0;">Late Check-out Fee</td>
+                    <td style="padding: 1rem 0;">N/A</td>
+                    <td style="padding: 1rem 0; text-align: right;">$50.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: right; padding: 1rem 0; font-weight: bold;">Grand Total:</td>
+                    <td style="text-align: right; padding: 1rem 0; font-weight: bold; font-size: 1.2rem; color: var(--primary);">$1,250.00</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div style="margin-top: 4rem; text-align: center; border-top: 1px solid #eee; padding-top: 1rem;">
+            <p style="color: #666; font-style: italic;">Thank you for staying at Grand Horizon. We look forward to seeing you again!</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
