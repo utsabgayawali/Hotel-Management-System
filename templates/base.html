@@ -17,7 +17,17 @@
             <a href="{% url 'room_list' %}">Rooms</a>
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'profile' %}">My Bookings</a>
+
+            {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+               <button type="submit" class="btn-auth">Logout</button>
+            </form>
+            {% else %}
             <a href="{% url 'login' %}" class="btn-auth">Login</a>
+            {% endif %}
+
+            
         </div>
     </nav>
 

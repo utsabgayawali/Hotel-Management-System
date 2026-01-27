@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from .form import RegesterForm,LoginForm
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView,LogoutView
 
 # Create your views here.
 
@@ -22,7 +22,17 @@ class LoginView(LoginView):
     redirect_authenticated_user =True
 
     def get_success_url(self):
-        return reverse_lazy('profile')
+        return reverse_lazy('home')
+
+
+class LogoutView(LogoutView):
+    next_page = reverse_lazy('login')
+
+
+# logout_view do not accepet get request so we have to put buttons inside form tag with method post
+
+
+
 
 
 

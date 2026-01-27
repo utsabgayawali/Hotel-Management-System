@@ -21,7 +21,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -72,7 +71,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* Shared Components */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -100,7 +98,6 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Footer */
 footer {
     background: var(--primary);
     color: var(--white);
@@ -115,10 +112,9 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Toggle this with JS */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -130,4 +126,72 @@ footer {
     }
     .nav-links.active { display: flex; }
     .hamburger { display: block; }
+}
+
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.auth-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.auth-card form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.auth-links {
+    margin-top: 25px;
+}
+
+.auth-links a {
+    display: block;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.auth-links span {
+    font-size: 14px;
+    color: #666;
 }
